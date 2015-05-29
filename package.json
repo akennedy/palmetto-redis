@@ -1,0 +1,29 @@
+{
+  "name": "palmetto-redis",
+  "version": "1.0.0",
+  "description": "A redis adapter for palmettoflow",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akennedy/palmetto-redis.git"
+  },
+  "keywords": [
+    "palmettoflow"
+  ],
+  "author": "Andrew Kennedy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akennedy/palmetto-redis/issues"
+  },
+  "homepage": "https://github.com/akennedy/palmetto-redis",
+  "devDependencies": {
+    "tap": "^1.2.0"
+  },
+  "dependencies": {
+    "redis": "^0.12.1",
+    "url": "^0.10.3"
+  }
+}
