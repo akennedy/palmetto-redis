@@ -1,4 +1,4 @@
-# Palmetto RMQ
+# Palmetto Redis
 
 This module uses redis as the pub/sub messaging component for palmetto flow applications
 
