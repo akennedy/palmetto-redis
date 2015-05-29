@@ -1,5 +1,5 @@
 {
-  "name": "palmetto-redis",
+  "name": "@akennedy/palmetto-redis",
   "version": "1.0.0",
   "description": "A redis adapter for palmettoflow",
   "main": "index.js",
