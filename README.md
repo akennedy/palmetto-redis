@@ -6,6 +6,7 @@ This module uses redis as the pub/sub messaging component for palmetto flow appl
 
 ## usage
 
+
 ### configure
 
 ``` js
