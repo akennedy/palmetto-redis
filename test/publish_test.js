@@ -14,15 +14,7 @@ test('publish', function (t) {
 
         },
         publish: function(app, stringifiedEvent) {
-          t.deepEquals(stringifiedEvent, {
-            'to': 'beep',
-            'from': 'boop',
-            'subject': 'widget',
-            'verb': 'create',
-            'object': {
-              'data': 'goes here'
-            }
-          })
+          t.deepEquals(stringifiedEvent, '{\"to\":\"beep\",\"from\":\"boop\",\"subject\":\"widget\",\"verb\":\"create\",\"object\":{\"data\":\"goes here\"}}')
         }
       }
     }

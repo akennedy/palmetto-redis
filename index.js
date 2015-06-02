@@ -29,7 +29,7 @@ module.exports = function (config) {
 
   // publish
   ee.on('send', function (event) {
-    var stringifiedEvent = event;
+    var stringifiedEvent = JSON.stringify(event);
     client2.publish(config.app, stringifiedEvent);
   })
   return ee
