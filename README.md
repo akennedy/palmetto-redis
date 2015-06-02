@@ -1,8 +1,8 @@
 # Palmetto Redis
 
-[![Build Status](https://travis-ci.org/akennedy/palmetto-redis.svg?branch=master)](https://travis-ci.org/akennedy/palmetto-redis)
-
 This module uses redis as the pub/sub messaging component for palmetto flow applications
+
+[![Build Status](https://travis-ci.org/akennedy/palmetto-redis.svg?branch=master)](https://travis-ci.org/akennedy/palmetto-redis)
 
 ## usage
 
