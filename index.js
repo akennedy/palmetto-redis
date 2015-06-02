@@ -1,7 +1,7 @@
 var EventEmitter = require('events').EventEmitter
 var ee = new EventEmitter()
 var url = require('url')
-var util = require('util');
+var redis = require('redis')
 
 
 module.exports = function (config) {
@@ -9,25 +9,28 @@ module.exports = function (config) {
   if (!config.endpoint) throw new Error('endpoint required!') 
   if (!config.app) throw new Error('app required!') 
 
-  var client1 = require('redis').createClient(
+  var client1 = redis.createClient(
     url.parse(config.endpoint).port,
     url.parse(config.endpoint).hostname
   )
 
-  var client2 = require('redis').createClient(
+  var client2 = redis.createClient(
     url.parse(config.endpoint).port,
     url.parse(config.endpoint).hostname
   )
 
+  // subscribe
   client1.on("message", function (channel, message) {
-    event = JSON.parse(message);
+    var event = JSON.parse(message);
     if (event.to) ee.emit(event.to, event);
   });
   
   client1.subscribe(config.app);
 
+  // publish
   ee.on('send', function (event) {
-    client2.publish(config.app, JSON.stringify(event))
+    var stringifiedEvent = event;
+    client2.publish(config.app, stringifiedEvent);
   })
   return ee
 }

@@ -1,5 +1,7 @@
 # Palmetto Redis
 
+[![Build Status](https://travis-ci.org/akennedy/palmetto-redis.svg?branch=master)](https://travis-ci.org/akennedy/palmetto-redis)
+
 This module uses redis as the pub/sub messaging component for palmetto flow applications
 
 ## usage
@@ -8,7 +10,7 @@ This module uses redis as the pub/sub messaging component for palmetto flow appl
 
 ``` js
 var io = require('@akennedy/palmetto-redis')({
-  endpoint: 'http:localhost:6379',
+  endpoint: 'http://localhost:6379',
   app: '<appname>'
 })
 ```
